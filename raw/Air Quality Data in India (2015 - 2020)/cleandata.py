@@ -10,7 +10,7 @@ df = pd.read_csv("raw\Air Quality Data in India (2015 - 2020)\Air Quality Data i
 df = df.dropna(subset=['PM2.5', 'PM10'], how='all')
 
 # Filter rows to keep only those with at least three out of the seven pollutants available
-required_pollutants = ['City', 'Date', 'PM2.5', 'PM10', 'NO2', 'CO', 'SO2', 'O3', 'AQI_Bucket']
+required_pollutants = ['City', 'Date', 'PM2.5', 'PM10', 'NO2', 'CO', 'SO2', 'O3','AQI']
 df = df.dropna(subset=required_pollutants, thresh=3)
 
 # Handle duplicate data
