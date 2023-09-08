@@ -1,0 +1,56 @@
+=== Run information ===
+
+Scheme: weka.classifiers.functions.LinearRegression -S 0 -R 1.0E-8 -num-decimal-places 4
+Relation: training_data
+Instances: 20553
+Attributes: 7
+PM2.5
+PM10
+NO2
+CO
+SO2
+O3
+AQI
+Test mode: 10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Linear Regression Model
+
+AQI =
+
+      1.0909 * PM2.5 +
+      0.2961 * PM10 +
+      0.2679 * NO2 +
+     11.263  * CO +
+      0.7413 * SO2 +
+      0.1844 * O3 +
+      6.7763
+
+Time taken to build model: 0.29 seconds
+
+=== Cross-validation ===
+=== Summary ===
+
+Correlation coefficient 0.9193
+Mean absolute error 30.5962
+Root mean squared error 55.8501
+Relative absolute error 31.6405 %
+Root relative squared error 39.3513 %
+Total Number of Instances 19825  
+Ignored Class Unknown Instances 728
+
+![Alt text](image.png)
+
+Tree model results:
+
+=== Cross-validation ===
+=== Summary ===
+
+Correlation coefficient 0.936
+Mean absolute error 23.7683
+Root mean squared error 49.9584
+Relative absolute error 24.5796 %
+Root relative squared error 35.2 %
+Total Number of Instances 19825  
+Ignored Class Unknown Instances 728
