@@ -3,17 +3,21 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 import csv
 
-df = pd.read_csv('test/cleaned_data.csv', encoding='utf-8')
+# read csv using pandas library
+df = pd.read_csv('./test/cleaned_data.csv', encoding='utf-8')
 print(df.head())
 
+# identify the required features
 features = ['PM2.5', 'PM10', 'NO2', 'CO', 'SO2', 'O3']
 
+# identify the target
 target = 'AQI'
 
-X = df[features]
+# find feature and target data in the csv
+x = df[features]
 y = df[target]
 try:
-    X = X.astype(int)
+    x = x.astype(int)
 except Exception as e:
     print(e)
 try:
@@ -21,7 +25,8 @@ try:
 except Exception as e:
     print(e)
 
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+# split the test & train data using sklearn
+X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
 
 # Save the training data to a CSV file
 training_data = pd.concat([X_train, y_train], axis=1)
