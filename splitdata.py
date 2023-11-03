@@ -1,7 +1,5 @@
-import os
 import pandas as pd
 from sklearn.model_selection import train_test_split
-import csv
 
 # read csv using pandas library
 df = pd.read_csv('./test/cleaned_data.csv', encoding='utf-8')
