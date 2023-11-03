@@ -10,7 +10,7 @@ df = df.dropna(subset=['PM2.5', 'PM10'], how='all')
 
 # Filter rows to keep only those with at least three out of the seven pollutants available
 required_pollutants = ['PM2.5', 'PM10', 'NO2', 'CO', 'SO2', 'O3','AQI']
-df = df.dropna(subset=required_pollutants, thresh=3)
+df = df.dropna(subset=required_pollutants, thresh=7)
 
 # Handle duplicate data
 df.drop_duplicates(inplace=True)
