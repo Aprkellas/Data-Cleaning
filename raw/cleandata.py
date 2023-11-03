@@ -1,6 +1,5 @@
-# Values I need: PM2.5, PM10, NO2, CO, SO2, and O3. 
+# Values Rqeuired: PM2.5, PM10, NO2, CO, SO2, and O3. 
 
-import os
 import pandas as pd
 
 # Load the data into a pandas DataFrame
